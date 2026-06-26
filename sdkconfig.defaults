@@ -1,0 +1,19 @@
+# ---- Flash: 16 MB (ESP32-S3-N16R8) ----
+CONFIG_ESPTOOLPY_FLASHSIZE_16MB=y
+CONFIG_ESPTOOLPY_FLASHSIZE="16MB"
+
+# ---- Custom partition table with a LittleFS "storage" area for fonts ----
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+
+# ---- Octal PSRAM (the R8 in N16R8) so we can load the multi-MB font into PSRAM ----
+CONFIG_SPIRAM=y
+CONFIG_SPIRAM_MODE_OCT=y
+CONFIG_SPIRAM_SPEED_80M=y
+CONFIG_SPIRAM_USE_MALLOC=y
+
+# FreeType allocates sizable buffers; allow them to land in PSRAM automatically.
+CONFIG_SPIRAM_MALLOC_ALWAYSINTERNAL=16384
+
+# FreeType glyph rasterization is stack-hungry; the 3.5 KB default main stack is too small.
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=32768
