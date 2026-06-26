@@ -97,4 +97,6 @@ docs/            설계 스펙 / 구현 플랜
 
 ## 라이선스
 
-`fonts/NotoSansKR-Regular.otf`는 [SIL Open Font License 1.1](https://openfontlicense.org/) 하에 배포되는 Google Noto 폰트입니다.
+이 프로젝트의 코드는 [MIT License](LICENSE)로 배포됩니다.
+
+`fonts/NotoSansKR-Regular.otf`는 [SIL Open Font License 1.1](https://openfontlicense.org/) 하에 배포되는 Google Noto 폰트로, MIT가 아닌 OFL을 따릅니다.
